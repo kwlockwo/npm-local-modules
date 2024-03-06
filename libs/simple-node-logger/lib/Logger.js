@@ -39,6 +39,7 @@ const Logger = function(options) {
         process.nextTick(function() {
             // write the message to the appenders...
             appenders.forEach(function(appender) {
+                console.log('About to log');
                 appender.write(entry);
             });
 
